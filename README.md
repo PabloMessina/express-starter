@@ -4,6 +4,12 @@
 
 [![wercker status](https://app.wercker.com/status/e19712109472ff03b1d2da2b6409c2af/s "wercker status")](https://app.wercker.com/project/bykey/e19712109472ff03b1d2da2b6409c2af)
 
+## Result
+
+Using [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop):
+
+![result](media/postman.png)
+
 ## Development
 
 Clone this repository:
