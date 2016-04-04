@@ -12,8 +12,9 @@
     "test": "mocha test"
   },
   "dependencies": {
-    "express": "^4.13.4",
     "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
     "morgan": "^1.7.0"
   },
   "devDependencies": {
