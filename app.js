@@ -9,7 +9,7 @@ const db = mongoose.connect('mongodb://localhost/test');
 //message schema
 const MessageSchema = mongoose.Schema({
     content: String,
-    date: Date
+    date: Date,
 });
 //message model
 const Message = mongoose.model('Message',MessageSchema);
@@ -31,8 +31,8 @@ app.get('/messages', (req,res) => {
         console.log("=========================");
         console.log("err = ", err);
         console.log("messages = ",messages);
-        res.send({ messages: messages });
-    });    
+        res.send({ messages });
+    });
 });
 
 //check for non-empty string
@@ -43,6 +43,9 @@ function isNonEmptyString(input) {
 //save received message asynchronously into mongoDB
 app.post('/messages', (req, res) => {
     const received_message = req.body.message;
+    console.log("------------------------");
+    console.log("post request received");
+    console.log("received_message = ", received_message);
     if (isNonEmptyString(received_message)) {
         const message = new Message();
         message.content = received_message;
@@ -56,8 +59,3 @@ app.post('/messages', (req, res) => {
 });
 
 module.exports = app;
-
-
-
-
-
